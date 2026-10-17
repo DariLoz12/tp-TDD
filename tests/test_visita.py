@@ -14,3 +14,6 @@ def test_cualquier_zona_trabajo_mismo_dia():
 
 def test_centrica_fin_de_semana():
     assert calcular_visita("centrica", False, True) == 8000 + (8000 * 0.5)
+
+def test_periferica_fin_de_semana_trabajo_mismo_dia():
+    assert calcular_visita("periferica", True, True) == 0
