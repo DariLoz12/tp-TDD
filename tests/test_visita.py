@@ -5,3 +5,6 @@ def test_centrica_sin_trabajo_semana():
 
 def test_periferica_sin_trabajo_semana():
     assert calcular_visita("periferica", False, False) == 12000
+
+def test_fuera_ciudad_sin_trabajo_semana():
+    assert calcular_visita("fuera_ciudad", False, False) == 18000
