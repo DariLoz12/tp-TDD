@@ -1,3 +1,4 @@
+import pytest
 from src.visita import calcular_visita
 
 def test_centrica_sin_trabajo_semana():
@@ -17,3 +18,7 @@ def test_centrica_fin_de_semana():
 
 def test_periferica_fin_de_semana_trabajo_mismo_dia():
     assert calcular_visita("periferica", True, True) == 0
+
+def test_zona_inexistente():
+    with pytest.raises(ValueError):
+        calcular_visita("marte", False, False)
